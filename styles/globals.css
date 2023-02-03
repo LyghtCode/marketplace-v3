@@ -1,8 +1,29 @@
+
+@font-face {
+  font-family: 'GTFlexa';
+  src: url('/fonts/GTFlexa-Regular.otf');
+ }
+
+ @font-face {
+  font-family: 'GTFlexaHeader';
+  src: url('/fonts/GTFlexa-CompressedMedium.otf');
+ }
+
+ @font-face {
+  font-family: 'GTFlexaSubtitle';
+  src: url('/fonts/GTFlexa-CompressedLight.otf');
+ }
+
+ @font-face {
+  font-family: 'GTFlexaButton';
+  src: url('/fonts/GTFlexa-Medium.otf');
+ }
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Inter, Helvetica, Arial, sans-serif;
+  font-family: GTFlexa, sans-serif;
 }
 
 * {
@@ -15,7 +36,7 @@ html {
 
 body {
   color: #ffffff;
-  background: #191c1f;
+  background: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, #00AEA5 90% );
   --color-primary: #fada3f;
   --color-secondary: #ff2136;
   --color-tertiary: #0294fe;
@@ -29,6 +50,8 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.5;
+  font-family: GTFlexaHeader, sans-serif;
+  color: #F05A26;
 }
 
 h3 {
@@ -36,10 +59,11 @@ h3 {
   line-height: 28px;
   font-weight: 700;
   margin-bottom: 0px;
+  font-family: GTFlexaSubtitle, sans-serif;
 }
 
 a {
-  color: inherit;
+  color: #0F2445;
   text-decoration: none;
 }
 
@@ -52,7 +76,7 @@ button {
   align-items: center;
   justify-content: center;
   border-color: rgb(255, 255, 255);
-  color: rgb(25, 28, 31) !important;
+  color: #0F2445 !important;
   background: rgb(255, 255, 255) !important;
   height: 40px;
   border: 1px solid transparent;
@@ -61,11 +85,12 @@ button {
   font-weight: 600;
   font-family: inherit;
   transition: all 0.15s ease-in-out 0s;
+  font-family: GTFlexaButton, sans-serif;
 }
 
 button:hover {
   cursor: pointer;
   background: rgb(255, 255, 255);
   border-color: rgb(255, 255, 255);
-  color: rgb(25, 28, 31);
+  color: #F05A26;
 }

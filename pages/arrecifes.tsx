@@ -9,7 +9,7 @@ import { MARKETPLACE_ADDRESS } from "../const/contractAddresses";
  * Landing page with a simple gradient background and a hero asset.
  * Free to customize as you see fit.
  */
-const Home: NextPage = () => {
+const Arrecife: NextPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -27,11 +27,10 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className={styles.heroAssetFrame}>
-
             <Image
-              src="/mdm.png"
-              width={560}
-              height={280}
+              src="/mares-de-mexico.png"
+              width={270}
+              height={430}
               alt="Restore Coral NFT Marketplace"
               quality={100}
               className={styles.heroAsset}
@@ -40,12 +39,29 @@ const Home: NextPage = () => {
           <div className={styles.heroBodyContainer}>
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
-                Nuestro Misión
+                <span className={styles.heroTitleGradient}>
+                  {/* Restore Coral */}
+                </span>
+                <br />
+                Arrecifes
               </h1>
               <p className={styles.heroSubtitle}>
-              En las últimas décadas el arrecife mesoamericano ha experimentado una pérdida de densidad del 75%, poniendo en <b>peligro</b> a cientos de especies marinas, además de a las comunidades que se dedican a la pesca. Es por ello que en <i>Restore Coral</i> buscamos propiciar la colaboración entre actores privados, gubernamentales, así como la sociedad civil y la academia, para darle voz a uno de los ecosistemas más importantes y amenazados a nivel mundial, los arrecifes de coral.
+              Los arrecifes de coral sanos brindan lo siguiente:
+              <br/>
+    • hábitat, alimentación y lugar de desove y cría para más de un millón de especies acuáticas, que incluyen especies de peces de recolección comercial;
+    <br/>
+    • alimentos para las personas que viven cerca de los arrecifes de coral, especialmente, en islas pequeñas;
+    <br/>
+    • oportunidades de recreación y turismo, por ejemplo, pesca, buceo con esnórkel y buceo con equipo de submarinismo, que aportan miles de millones de dólares a las economías locales;
+    <br/>
+    • protección de la infraestructura costera y prevención de la pérdida de vidas a causa de tormentas, tsunamis, inundaciones y erosión;
+    <br/>
+    • fuentes de nuevos medicamentos que pueden usarse para tratar enfermedades y otros problemas de salud.
               </p>
 
+              <div className={styles.heroCtaContainer}>
+         
+              </div>
             </div>
           </div>
         </div>
@@ -54,4 +70,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Arrecife;

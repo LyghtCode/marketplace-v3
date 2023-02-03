@@ -7,10 +7,15 @@ import NFT from "./NFT";
 import styles from "../../styles/Buy.module.css";
 
 type Props = {
+
   isLoading: boolean;
+
   data: NFTType[] | undefined;
+
   // TODO: Allow button to be passed in (for buy, sell, offer, etc.)
+
   // TODO: Allow pagination logic
+
 };
 
 export default function NFTGrid({ isLoading, data }: Props) {

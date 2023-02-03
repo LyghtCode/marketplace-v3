@@ -616,6 +616,11 @@
   dependencies:
     "@floating-ui/core" "^1.0.5"
 
+"@fontsource/genos@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/genos/-/genos-4.5.11.tgz#5785be0aa554b7f058b28c54c58d042d26d1ea96"
+  integrity sha512-VfFW1+jOWhJgDaLcGoc0Cm83bATdI9Fr+G8LL7GzT1PxGzKdXX1pWJKU5PQGHoxzahT5iKK886rbHbKakMvh1Q==
+
 "@gnosis.pm/safe-deployments@1.17.0":
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-deployments/-/safe-deployments-1.17.0.tgz#52a7b0e75c08b4a829f491b594e2babbdd6606c5"

@@ -3,7 +3,9 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { Navbar } from "../components/Navbar/Navbar";
 import NextNProgress from "nextjs-progressbar";
 import { NETWORK_ID } from "../const/contractAddresses";
+import "@fontsource/genos";
 import "../styles/globals.css";
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

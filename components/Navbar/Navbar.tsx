@@ -16,19 +16,46 @@ export function Navbar() {
         <div className={styles.navLeft}>
           <Link href="/" className={`${styles.homeLink} ${styles.navLeft}`}>
             <Image
-              src="/logo.png"
+              src="/Hunabku.png"
               width={48}
               height={48}
-              alt="NFT marketplace sample logo"
+              alt="Restore coral NFT Marketplace"
             />
           </Link>
 
           <div className={styles.navMiddle}>
             <Link href="/buy" className={styles.link}>
-              Buy
+            <Image
+              src="/icons/exp.png"
+              width={36}
+              height={36}
+              alt="Restore coral NFT Marketplace"
+            />
+              EXPERIENCIAS
             </Link>
             <Link href="/sell" className={styles.link}>
-              Sell
+            <Image
+              src="/icons/coral.png"
+              width={36}
+              height={36}
+              alt="Restore coral NFT Marketplace"
+            />
+              MIS NFTs
+            </Link>
+            <Link href="/about" className={styles.link}>
+            <Image
+              src="/icons/dolphins.png"
+              width={36}
+              height={36}
+              alt="Restore coral NFT Marketplace"
+            />
+            QUIÉNES SOMOS
+            </Link>
+            <Link href="/arrecifes" className={styles.link}>
+              ARRECIFES
+            </Link>
+            <Link href="/historia" className={styles.link}>
+              HISTORIA
             </Link>
           </div>
         </div>

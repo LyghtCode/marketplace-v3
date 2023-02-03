@@ -135,7 +135,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     NFT_COLLECTION_ABI
   );
 
-  const nft = await contract.erc721.get(tokenId);
+  const nft = await contract.erc1155.get(tokenId);
   const contractMetadata = await contract.metadata.get();
 
   return {
@@ -155,7 +155,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   );
 
   // TODO: Pagination?
-  const nfts = await contract.erc721.getAll();
+  const nfts = await contract.erc1155.getAll();
 
   const paths = nfts.map((nft) => {
     return {
