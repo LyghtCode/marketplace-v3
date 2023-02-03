@@ -79,7 +79,7 @@
 .heroTitle {
   margin-top: clamp(-30px, calc(-7vw + 57px), 5px);
   margin-bottom: 20px;
-  color: #fff;
+  color: #F05A26;
   font-size: Min(12vw, 80px);
   font-style: normal;
   font-weight: 700;
