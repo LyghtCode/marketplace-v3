@@ -21,6 +21,10 @@
   min-height: 312px;
   max-height: 382px;
   transition: all 0.25s ease-in-out;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .nftContainer:hover {

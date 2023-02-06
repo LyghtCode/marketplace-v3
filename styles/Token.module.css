@@ -71,6 +71,7 @@
   overflow: hidden;
   max-width: 100%;
   margin: 0px;
+  color:#0F2445;
 }
 
 .title {
@@ -120,7 +121,7 @@
 }
 
 .label {
-  color: rgba(255, 255, 255, 0.6);
+  color: #F05A26;
   margin: 0px;
   margin-bottom: 4px;
 }
@@ -128,7 +129,7 @@
 .nftOwnerAddress {
   font-weight: 600;
   margin: 0px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #0F2445;
 }
 
 .descriptionContainer {
@@ -164,7 +165,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: #0F2445;
   margin: 0px;
   border-radius: 8px;
 }

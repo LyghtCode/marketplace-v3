@@ -35,8 +35,8 @@ html {
 }
 
 body {
-  color: #ffffff;
-  background: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, #00AEA5 90% );
+  color: #F05A26;
+  background: url('/bg-graphic.png');
   --color-primary: #fada3f;
   --color-secondary: #ff2136;
   --color-tertiary: #0294fe;
@@ -68,7 +68,7 @@ a {
 }
 
 p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #04818F;
 }
 
 button {

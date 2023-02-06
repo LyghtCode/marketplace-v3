@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.heroBodyContainer}>
           <Image
-              src="/mdm.png"
+              src="/mdm-blanco.png"
               width={560}
               height={280}
               alt="Restore Coral NFT Marketplace"
