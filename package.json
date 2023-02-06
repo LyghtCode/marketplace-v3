@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fontsource/genos": "^4.5.11",
+    "@lottiefiles/react-lottie-player": "^3.5.2",
     "@thirdweb-dev/react": "3.8.0-dev-8ee10ca",
     "@thirdweb-dev/sdk": "3.8.0-dev-8ee10ca",
     "ethers": "^5.7.2",

@@ -51,10 +51,23 @@ export function Navbar() {
             />
             QUIÉNES SOMOS
             </Link>
+            
             <Link href="/arrecifes" className={styles.link}>
+            <Image
+              src="/icons/coral.png"
+              width={36}
+              height={36}
+              alt="Restore coral NFT Marketplace"
+            />
               ARRECIFES
             </Link>
             <Link href="/historia" className={styles.link}>
+            <Image
+              src="/icons/dolphins.png"
+              width={36}
+              height={36}
+              alt="Restore coral NFT Marketplace"
+            />
               HISTORIA
             </Link>
           </div>
