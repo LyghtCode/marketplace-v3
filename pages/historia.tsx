@@ -32,38 +32,45 @@ const About: NextPage = () => {
           
           </div>
           <div className={styles.heroBodyContainer}>
-          <Image
+       
+          {/* <Image
               src="/logo-main.png"
               width={270}
               height={270}
               alt="Restore Coral NFT Marketplace"
               quality={100}
               className={styles.heroAsset}
-            />
+            /> */}
             <div className={styles.heroBody}>
+            <Player
+                autoplay
+                loop
+                src="https://assets10.lottiefiles.com/packages/lf20_dhKO1k.json"
+                style={{ height: '60px', width: '60px' }}
+              >
+              </Player>
               <h1 className={styles.heroTitle}>
-                <span className={styles.heroTitleGradient}>
+                {/* <span className={styles.heroTitleGradient}> */}
                 NUESTRA HISTORIA
-                </span>
-                
+                {/* </span> */}
               </h1>
               <p className={styles.heroSubtitle}>
-              Implentamos estrategias que involucran la tecnología y el arte para despertar la conciencia de la necesidad de proteger y restaurar nuestros ecosistemas marinos. Involucrar comunidades locales generando formas sustentables de ecoturismo que empleen a poblaciones marginadas.
+              Implentamos estrategias que involucran la tecnología y el arte para despertar la conciencia de la necesidad de proteger y restaurar nuestros ecosistemas. Involucrar comunidades locales generando formas sustentables de ecoturismo.
 Sensibilizar a los encargados de formular políticas públicas de la importancia de los arrecifes de coral para la subsistencia de numerosas especies marinas, así como para las actividades humanas. Buscar alianzas con actores gubernamentales y asociaciones internacionales.
 <br />
--VR reality
+-VR Reality
 <br />
--Galería mural Project
+-Galería Mural Project
 <br />
 -PARTICIPANTES UN OCEAN WORLD 2020
 <br />
 -Desafío viaja disfruta y respeta
 <br />
--Raving for the corals
+-Raving for The Corals
 <br />
 -Día de los océanos en CDMX y Tulum 2018
-<br />
--Récord corales, planetario Cozumel
+{/* <br />
+-Récord corales, planetario Cozumel */}
 <br />
 -Members of open explorer y national geographic
 <br />
