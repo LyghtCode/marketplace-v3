@@ -16,24 +16,24 @@ const About: NextPage = () => {
       <div className={styles.content}>
         <div className={styles.hero}>
           <div className={styles.heroBackground}>
-          <Player
-                autoplay
-                loop
-                src="https://assets6.lottiefiles.com/packages/lf20_qsgqcwag.json"
-                // style={{ height: '100vh', width: '100vw' }}
-              >
-              </Player>
+            <Player
+              autoplay
+              loop
+              src="https://assets6.lottiefiles.com/packages/lf20_qsgqcwag.json"
+            // style={{ height: '100vh', width: '100vw' }}
+            >
+            </Player>
             <div className={styles.heroBackgroundInner}>
-        
+
             </div>
           </div>
           <div className={styles.heroAssetFrame}>
             {/* replace with lottie */}
-          
+
           </div>
           <div className={styles.heroBodyContainer}>
-       
-          {/* <Image
+
+            {/* <Image
               src="/logo-main.png"
               width={270}
               height={270}
@@ -42,7 +42,7 @@ const About: NextPage = () => {
               className={styles.heroAsset}
             /> */}
             <div className={styles.heroBody}>
-            <Player
+              <Player
                 autoplay
                 loop
                 src="https://assets10.lottiefiles.com/packages/lf20_dhKO1k.json"
@@ -55,30 +55,29 @@ const About: NextPage = () => {
                 {/* </span> */}
               </h1>
               <p className={styles.heroSubtitle}>
-              Implentamos estrategias que involucran la tecnología y el arte para despertar la conciencia de la necesidad de proteger y restaurar nuestros ecosistemas. Involucrar comunidades locales generando formas sustentables de ecoturismo.
-Sensibilizar a los encargados de formular políticas públicas de la importancia de los arrecifes de coral para la subsistencia de numerosas especies marinas, así como para las actividades humanas. Buscar alianzas con actores gubernamentales y asociaciones internacionales.
-<br />
--VR Reality
-<br />
--Galería Mural Project
-<br />
--PARTICIPANTES UN OCEAN WORLD 2020
-<br />
--Desafío viaja disfruta y respeta
-<br />
--Raving for The Corals
-<br />
--Día de los océanos en CDMX y Tulum 2018
-{/* <br />
+                Implentamos estrategias que involucran tecnología y arte para despertar la conciencia de la necesidad de proteger y restaurar a nuestros ecosistemas. Buscamos involucrar comunidades locales generando formas sustentables de ecoturismo, y al mismo tiempo sensibilizando a los encargados de formular políticas públicas sobre la importancia de los arrecifes de coral para la subsistencia de numerosas especies marinas, así como para las actividades humanas. Uno de nuestros objetivos es buscar alianzas con actores gubernamentales y asociaciones internacionales, para incrementar el apoyo entre sectores.
+                <br />
+                -VR Reality
+                <br />
+                -Galería Mural Project
+                <br />
+                -PARTICIPANTES UN OCEAN WORLD 2020
+                <br />
+                -Desafío viaja disfruta y respeta
+                <br />
+                -Raving for The Corals
+                <br />
+                -Día de los océanos en CDMX y Tulum 2018
+                {/* <br />
 -Récord corales, planetario Cozumel */}
-<br />
--Members of open explorer y national geographic
-<br />
--Océano sostenible para todos
+                <br />
+                -Members of open explorer y national geographic
+                <br />
+                -Océano sostenible para todos
               </p>
 
               <div className={styles.heroCtaContainer}>
-              
+
               </div>
             </div>
           </div>

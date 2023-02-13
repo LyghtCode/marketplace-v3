@@ -11,6 +11,7 @@ import { ChainId } from "@thirdweb-dev/sdk";
  */
 
 // 1. Set up the network ID of the network your smart contracts are deployed to.
+// Cambia a Polygon Mainnet
 export const NETWORK_ID = ChainId.Mumbai;
 
 // 2. The address of the marketplace smart contract.

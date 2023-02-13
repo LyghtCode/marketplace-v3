@@ -40,10 +40,10 @@ const Home: NextPage = () => {
             />
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
-                Nuestro Misión
+                Nuestra Misión
               </h1>
               <p className={styles.heroSubtitle}>
-                En las últimas décadas el arrecife mesoamericano ha experimentado una pérdida de densidad del 75%, poniendo en <b>peligro</b> a cientos de especies marinas, además de a las comunidades que se dedican a la pesca. Es por ello que en <i>Restore Coral</i> buscamos propiciar la colaboración entre actores privados, gubernamentales, así como la sociedad civil y la academia, para darle voz a uno de los ecosistemas más importantes y amenazados a nivel mundial, los arrecifes de coral.
+                En las últimas décadas el arrecife mesoamericano ha experimentado una pérdida de densidad del 75%, poniendo en peligro a cientos de especies marinas, además de las comunidades que se dedican a la pesca. Es por ello que en <b>Restore Coral</b> buscamos propiciar la colaboración entre actores privados, gubernamentales, así como a la sociedad civil y la academia, para poder darle voz a uno de los ecosistemas más importantes y amenazados a nivel mundial, los arrecifes de coral.
               </p>
 
             </div>

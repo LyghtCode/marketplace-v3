@@ -42,7 +42,7 @@ const About: NextPage = () => {
                 QUIÉNES SOMOS
               </h1>
               <p className={styles.heroSubtitle}>
-              Somos una organización trabajando para la restauración de los sistemas arrecifales en <b>Mexico</b>, empezando por el <i>Sistema Arrecifal Mesoamericano.</i> A través de la innovación social, el arte y el uso de tecnologias emergentes buscamos sensibilizar al público acerca de la importancia de la protección de los arrecifes de coral. Buscamos impulsar un modelo de <b>sustentabilidad</b> que proteja el medio marino, al mismo tiempo que permita desarrollar estrategias productivas responsables socialmente, las cuales involucren a las comunidades, como el ecoturismo.
+              Somos una organización trabajando para la restauración de los sistemas arrecifales en <b>México</b>, empezando por el <i>Sistema Arrecifal Mesoamericano</i>. A través de la innovación social, el arte y el uso de tecnologías emergentes buscamos sensibilizar al público acerca de la importancia de la protección de los arrecifes de coral. Buscamos impulsar un modelo de sustentabilidad que proteja al medio marino, al mismo tiempo que permita desarrollar estrategias productivas responsables socialmente, las cuales involucren a diferentes comunidades, así como el ecoturismo.
               </p>
 
             </div>

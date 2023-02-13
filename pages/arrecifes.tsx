@@ -41,15 +41,15 @@ const Arrecife: NextPage = () => {
               <p className={styles.heroSubtitle}>
               Los arrecifes de coral sanos brindan lo siguiente:
               <br/>
-    • hábitat, alimentación y lugar de desove y cría para más de un millón de especies acuáticas, que incluyen especies de peces de recolección comercial;
+    • Hábitat, alimentación y un lugar de desove y cría para más de un millón de especies acuáticas, que incluyen especies de peces de recolección comercial
     <br/>
-    • alimentos para las personas que viven cerca de los arrecifes de coral, especialmente, en islas pequeñas;
+    • Alimentos para la sociedad que vive cerca de los arrecifes de coral, especialmente en islas pequeñas
     <br/>
-    • oportunidades de recreación y turismo, por ejemplo, pesca, buceo con esnórkel y buceo con equipo de submarinismo, que aportan miles de millones de dólares a las economías locales;
+    • Oportunidades de recreación y turismo, por ejemplo: pesca, snorkel y buceo con equipo de submarinismo, que aportan miles de millones de dólares a las economías locales anualmente
     <br/>
-    • protección de la infraestructura costera y prevención de la pérdida de vidas a causa de tormentas, tsunamis, inundaciones y erosión;
+    • Protección de la infraestructura costera y prevención de la pérdida de vidas a causa de tormentas, tsunamis, inundaciones y erosión
     <br/>
-    • fuentes de nuevos medicamentos que pueden usarse para tratar enfermedades y otros problemas de salud.
+    • Fuentes de nuevos medicamentos que se pueden utilizar para tratar enfermedades y otros problemas de salud
               </p>
 
               <div className={styles.heroCtaContainer}>
