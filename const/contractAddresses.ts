@@ -12,14 +12,14 @@ import { ChainId } from "@thirdweb-dev/sdk";
 
 // 1. Set up the network ID of the network your smart contracts are deployed to.
 // Cambia a Polygon Mainnet
-export const NETWORK_ID = ChainId.Mumbai;
+export const NETWORK_ID = ChainId.Polygon;
 
 // 2. The address of the marketplace smart contract.
 export const MARKETPLACE_ADDRESS = "0x1D733288366b90781059BB8Fcf5680De8925CfFC";
 
 // 3. The address of your NFT collection smart contract.
 export const NFT_COLLECTION_ADDRESS =
-  "0x4bcB128CD1e1A6f3C182b7047F96CCc6eDd186Fc";
+  "0x78D06B1F19dDb6Ba5765F6A60D29EF6059c89a47";
 
 // 4. The ABI of your NFT collection smart contract.
 export const NFT_COLLECTION_ABI = [
