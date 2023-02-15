@@ -102,16 +102,23 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
           <div className={styles.pricingContainer}>
             {/* Pricing information */}
-            <div className={styles.pricingInfo}>{/* TODO: Price */}</div>
+            <div className={styles.pricingInfo}>50 USDC</div>
             <Web3Button
-              contractAddress={MARKETPLACE_ADDRESS}
-              className={styles.buyButton}
-              action={() => {
-                console.log("Buy now clicked");
-              }}
-            >
-              Buy now
-            </Web3Button>
+                        contractAddress={NFT_COLLECTION_ADDRESS || ""}
+                        action={(cntr) => cntr.erc1155.claim(nft.metadata.id,1)}
+                        // isDisabled={!canClaim || buttonLoading}
+                        onError={(err) => {
+                          console.error(err);
+                          alert("Error claiming NFTs");
+                        }}
+                        onSuccess={() => {
+                          // setQuantity(1);
+                          alert("Successfully claimed NFTs");
+                        }}
+                      >
+                        Restore Now
+                        {/* {buttonLoading ? "Loading..." : buttonText} */}
+                      </Web3Button>
           </div>
 
           {/* 1. Item is not for sale? */}

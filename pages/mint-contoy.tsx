@@ -31,18 +31,18 @@ const Contoy: NextPage = () => {
   const { data: contractMetadata } = useContractMetadata(nftDrop);
   // console.log(contractMetadata);
 
-  const claimConditions = useClaimConditions(nftDrop,0);
+  const claimConditions = useClaimConditions(nftDrop, 3);
   console.log(claimConditions.data);
 
   const activeClaimCondition = useActiveClaimConditionForWallet(
     nftDrop,
-    address || "", 0
+    address || "", 3
   );
-  const claimerProofs = useClaimerProofs(nftDrop, address || "",0);
+  const claimerProofs = useClaimerProofs(nftDrop, address || "", 3);
   const claimIneligibilityReasons = useClaimIneligibilityReasons(nftDrop, {
     quantity,
     walletAddress: address || "",
-  },0);
+  }, 3);
   // console.log(claimIneligibilityReasons.data)
   const unclaimedSupply = useUnclaimedNFTSupply(nftDrop);
   const claimedSupply = useClaimedNFTSupply(nftDrop);
@@ -167,15 +167,15 @@ const Contoy: NextPage = () => {
   const isLoading = useMemo(() => {
     return (
       activeClaimCondition.isLoading ||
-      unclaimedSupply.isLoading ||
-      claimedSupply.isLoading ||
+      // unclaimedSupply.isLoading ||
+      // claimedSupply.isLoading ||
       !nftDrop
     );
   }, [
     activeClaimCondition.isLoading,
     nftDrop,
-    claimedSupply.isLoading,
-    unclaimedSupply.isLoading,
+    // claimedSupply.isLoading,
+    // unclaimedSupply.isLoading,
   ]);
 
   const buttonLoading = useMemo(
@@ -234,7 +234,7 @@ const Contoy: NextPage = () => {
               {/* Image Preview of NFTs */}
               <MediaRenderer
                 className={styles.image}
-                src={contractMetadata?.image}
+                src={'./contoy.jpeg'}
                 alt={`${contractMetadata?.name} preview image`}
               />
 

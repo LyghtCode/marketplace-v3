@@ -16,7 +16,7 @@ export function Navbar() {
         <div className={styles.navLeft}>
           <Link href="/" className={`${styles.homeLink} ${styles.navLeft}`}>
             <Image
-              src="/simbolo.png"
+              src="/logo-main.png"
               width={48}
               height={48}
               alt="Restore coral NFT Marketplace"
@@ -33,7 +33,7 @@ export function Navbar() {
             />
               EXPERIENCIAS
             </Link>
-            <Link href="/sell" className={styles.link}>
+            {/* <Link href="/sell" className={styles.link}>
             <Image
               src="/icons/coral.png"
               width={36}
@@ -41,7 +41,7 @@ export function Navbar() {
               alt="Restore coral NFT Marketplace"
             />
               MIS NFTs
-            </Link>
+            </Link> */}
             <Link href="/about" className={styles.link}>
             <Image
               src="/icons/dolphins.png"
