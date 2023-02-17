@@ -67,7 +67,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     <Container maxWidth="lg">
       <div className={styles.container}>
         <div className={styles.metadataContainer}>
-          <ThirdwebNftMedia metadata={nft.metadata} className={styles.image} />
+          <ThirdwebNftMedia metadata={nft.metadata} width={'50vw'} height={'50vh'} className={styles.image} />
 
           <div className={styles.descriptionContainer}>
             <h3 className={styles.descriptionTitle}>Description</h3>
