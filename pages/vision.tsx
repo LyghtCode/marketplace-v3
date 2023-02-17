@@ -8,7 +8,7 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
  * Landing page with a simple gradient background and a hero asset.
  * Free to customize as you see fit.
  */
-const Home: NextPage = () => {
+const Vision: NextPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -39,13 +39,22 @@ const Home: NextPage = () => {
             />
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
-                Our Mission
+                Vision
               </h1>
               <p className={styles.heroSubtitle}>
-                Regenerating Coastal & Marine Ecosystems, while reducing poverty and protecting ancestral wisdom.
-              </p>
-              <p className={styles.heroSubtitle}>
-                Buscamos propiciar la colaboración entre actores privados, gubernamentales, así como a la sociedad civil y la academia, para poder darle voz a uno de los ecosistemas más importantes y amenazados a nivel mundial, los arrecifes de coral.
+                We implement social innovation, emerging technologies & traditional knowlodge in favor of the oceans. Programs:
+                <br />
+                • Immersive Education Campaings
+                <br />
+                • Inclusive Coral Restoration Programs
+                <br />
+                • Supporting R&D
+                <br />
+                • Capacity Building
+                <br />
+                • Lobby
+                <br />
+                • ARTivism
               </p>
             </div>
           </div>
@@ -55,4 +64,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Vision;

@@ -31,7 +31,7 @@ export function Navbar() {
               height={36}
               alt="Restore coral NFT Marketplace"
             />
-              EXPERIENCIAS
+              Adopt-A-Coral
             </Link>
             {/* <Link href="/sell" className={styles.link}>
             <Image
@@ -49,7 +49,7 @@ export function Navbar() {
               height={36}
               alt="Restore coral NFT Marketplace"
             />
-            QUIÉNES SOMOS
+            About
             </Link>
             
             <Link href="/arrecifes" className={styles.link}>
@@ -59,7 +59,7 @@ export function Navbar() {
               height={36}
               alt="Restore coral NFT Marketplace"
             />
-              ARRECIFES
+              Reefs
             </Link>
             <Link href="/historia" className={styles.link}>
             <Image
@@ -68,7 +68,7 @@ export function Navbar() {
               height={36}
               alt="Restore coral NFT Marketplace"
             />
-              HISTORIA
+              Our Story
             </Link>
           </div>
         </div>
