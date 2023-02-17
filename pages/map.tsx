@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import styles from "../styles/Theme.module.css";
 
-
 const Map: NextPage = () => {
-
-
   return (
     <div className={styles.container}>
       <div className={styles.mintInfoContainer}>

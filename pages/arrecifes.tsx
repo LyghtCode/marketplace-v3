@@ -1,9 +1,5 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { useContract } from "@thirdweb-dev/react";
-import { MARKETPLACE_ADDRESS } from "../const/contractAddresses";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 /**

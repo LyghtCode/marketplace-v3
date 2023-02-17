@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
@@ -45,7 +44,7 @@ const Home: NextPage = () => {
                 Regenerating Coastal & Marine Ecosystems, while reducing poverty and protecting ancestral wisdom.
               </p>
               <p className={styles.heroSubtitle}>
-                Buscamos propiciar la colaboración entre actores privados, gubernamentales, así como a la sociedad civil y la academia, para poder darle voz a uno de los ecosistemas más importantes y amenazados a nivel mundial, los arrecifes de coral.
+              Implementamos innovación social, tecnologías emergentes y conocimientos tradicionales a favor de los océanos.
               </p>
             </div>
           </div>
