@@ -13,6 +13,8 @@ const Home: NextPage = () => {
       <div className={styles.content}>
         <div className={styles.hero}>
           <div className={styles.heroBackground}>
+            {/* <video autoPlay muted loop id="myVideo" src="https://www.canva.com/design/DAFR9o9eXJE/qmBqeG9mGlW-tg8yKgw9Qg/watch?utm_content=DAFR9o9eXJE&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel">
+            </video> */}
             <Player
               autoplay
               loop
