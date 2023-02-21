@@ -32,9 +32,22 @@ const Arrecife: NextPage = () => {
                   {/* Restore Coral */}
                 </span>
                 <br />
-                Arrecifes
+                The Coral Reef Ecosystem
               </h1>
               <p className={styles.heroSubtitle}>
+              Healthy coral reefs provide the following::
+                <br />
+                • Habitat, food, and a spawning and breeding ground for over one million aquatic species, including commercially harvested fish species.
+                <br />
+                • Food for the society living near coral reefs, especially in small islands.
+                <br />
+                • Recreation and tourism opportunities, for example: fishing, snorkeling, and scuba diving, which contribute billions of dollars annually to local economies.
+                <br />
+                • Protection of coastal infrastructure and prevention of loss of lives due to storms, tsunamis, flooding, and erosion.
+                <br />
+                • Sources of new medicines that can be used to treat diseases and other health problems.
+              </p>
+              {/* <p className={styles.heroSubtitle}>
                 Los arrecifes de coral sanos brindan lo siguiente:
                 <br />
                 • Hábitat, alimentación y un lugar de desove y cría para más de un millón de especies acuáticas, que incluyen especies de peces de recolección comercial
@@ -46,7 +59,7 @@ const Arrecife: NextPage = () => {
                 • Protección de la infraestructura costera y prevención de la pérdida de vidas a causa de tormentas, tsunamis, inundaciones y erosión
                 <br />
                 • Fuentes de nuevos medicamentos que se pueden utilizar para tratar enfermedades y otros problemas de salud
-              </p>
+              </p> */}
 
               <div className={styles.heroCtaContainer}>
 

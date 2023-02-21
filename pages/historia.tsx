@@ -47,10 +47,29 @@ const About: NextPage = () => {
               </Player>
               <h1 className={styles.heroTitle}>
                 {/* <span className={styles.heroTitleGradient}> */}
-                NUESTRA HISTORIA
+                Our Story
                 {/* </span> */}
               </h1>
               <p className={styles.heroSubtitle}>
+              We implement strategies that involve technology and art to raise awareness of the need to protect and restore our ecosystems. We aim to involve local communities by generating sustainable forms of ecotourism, while also sensitizing policy makers about the importance of coral reefs for the subsistence of numerous marine species.
+                <br />
+                • VR Reality
+                <br />
+                • Galería Mural Project
+                <br />
+                • Ocean World Participants 202
+                <br />
+                • Travel, Enjoy and Respect Challenge
+                <br />
+                • Raving for The Corals
+                <br />
+                • Ocean Day CDMX & Tulum 2018
+                <br />
+                • Members of Open Explorer & National Geographic
+                <br />
+                • Sustainable Ocean for All
+              </p>
+              {/* <p className={styles.heroSubtitle}>
                 Implentamos estrategias que involucran tecnología y arte para despertar la conciencia de la necesidad de proteger y restaurar a nuestros ecosistemas. Buscamos involucrar comunidades locales generando formas sustentables de ecoturismo, y al mismo tiempo sensibilizando a los encargados de formular políticas públicas sobre la importancia de los arrecifes de coral para la subsistencia de numerosas especies marinas.
                 <br />
                 • VR Reality
@@ -68,7 +87,7 @@ const About: NextPage = () => {
                 • Members of open explorer y national geographic
                 <br />
                 • Océano sostenible para todos
-              </p>
+              </p> */}
 
               <div className={styles.heroCtaContainer}>
 

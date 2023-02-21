@@ -39,11 +39,15 @@ const About: NextPage = () => {
               className={styles.heroAsset}
             />
               <h1 className={styles.heroTitle}>
-                QUIÉNES SOMOS
+                Who Are We?
               </h1>
               <p className={styles.heroSubtitle}>
-              Somos una organización trabajando para la restauración de los sistemas arrecifales en <b>México</b>, empezando por el <i>Sistema Arrecifal Mesoamericano</i>. A través de la innovación social, el arte y el uso de tecnologías emergentes buscamos sensibilizar al público acerca de la importancia de la protección de los arrecifes de coral. Buscamos impulsar un modelo de sustentabilidad que proteja al medio marino, al mismo tiempo que permita desarrollar estrategias productivas responsables socialmente, las cuales involucren a diferentes comunidades, así como el ecoturismo.
+              We are an organization working for the restoration of reef systems in Mexico, starting with the Mesoamerican Reef System. Through social innovation, art, and the use of emerging technologies, we seek to raise awareness among the public about the importance of protecting coral reefs. We aim to promote a sustainability model that protects the marine environment while also enabling socially responsible productive strategies that involve different communities, as well as ecotourism.
               </p>
+              {/* <p className={styles.heroSubtitle}>
+              Somos una organización trabajando para la restauración de los sistemas arrecifales en <b>México</b>, empezando por el <i>Sistema Arrecifal Mesoamericano</i>. A través de la innovación social, el arte y el uso de tecnologías emergentes buscamos sensibilizar al público acerca de la importancia de la protección de los arrecifes de coral. Buscamos impulsar un modelo de sustentabilidad que proteja al medio marino, al mismo tiempo que permita desarrollar estrategias productivas responsables socialmente, las cuales involucren a diferentes comunidades, así como el ecoturismo.
+              </p> */}
+
 
             </div>
           </div>
