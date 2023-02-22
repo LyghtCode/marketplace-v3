@@ -43,11 +43,11 @@ const Home: NextPage = () => {
                 Our Mission
               </h1>
               <p className={styles.heroSubtitle}>
-                Regenerating Coastal & Marine Ecosystems, while reducing poverty and protecting ancestral wisdom.
+                Regenerating Coastal & Marine Ecosystems, while reducing poverty and protecting ancestral wisdom with a combination of art, technology & social outreach programs.
               </p>
-              <p className={styles.heroSubtitle}>
+              {/* <p className={styles.heroSubtitle}>
               Implementamos innovación social, tecnologías emergentes y conocimientos tradicionales a favor de los océanos.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
