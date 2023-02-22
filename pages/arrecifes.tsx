@@ -36,6 +36,7 @@ const Arrecife: NextPage = () => {
               </h1>
               <p className={styles.heroSubtitle}>
               Healthy coral reefs provide the following:
+              <br />
                 <br />
                 Habitat, food, and a spawning and breeding ground for over one million aquatic species, including commercially harvested fish species.
                 <br />
