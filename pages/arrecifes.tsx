@@ -12,18 +12,20 @@ const Arrecife: NextPage = () => {
       <div className={styles.content}>
         <div className={styles.hero}>
           <div className={styles.heroBackground}>
+         
+            <div className={styles.heroBackgroundInner}>
             <Player
               autoplay
               loop
-              src="https://assets6.lottiefiles.com/packages/lf20_qsgqcwag.json"
-            // style={{ height: '100vh', width: '100vw' }}
+              src="https://assets10.lottiefiles.com/packages/lf20_gwsharow.json"
+            // style={{ height: '50vh', width: '50vw' }}
             >
             </Player>
-            <div className={styles.heroBackgroundInner}>
+
             </div>
           </div>
           <div className={styles.heroAssetFrame}>
-
+      
           </div>
           <div className={styles.heroBodyContainer}>
             <div className={styles.heroBody}>

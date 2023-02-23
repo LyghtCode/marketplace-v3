@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             <Player
               autoplay
               loop
-              src="https://assets6.lottiefiles.com/packages/lf20_qsgqcwag.json"
+              src="https://assets10.lottiefiles.com/packages/lf20_nzypsmyf.json"
             // style={{ height: '100vh', width: '100vw' }}
             >
             </Player>
@@ -29,9 +29,9 @@ const Home: NextPage = () => {
           <div className={styles.heroAssetFrame}>
             {/* boop */}
           </div>
-          <div className={styles.heroBodyContainer}>
+          <div >
             <Image
-              src="/logo-blanco.png"
+              src="/logo-main.png"
               width={330}
               height={280}
               alt="Restore Coral NFT Marketplace"

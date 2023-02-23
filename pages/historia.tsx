@@ -15,7 +15,7 @@ const About: NextPage = () => {
             <Player
               autoplay
               loop
-              src="https://assets6.lottiefiles.com/packages/lf20_qsgqcwag.json"
+              src="https://assets10.lottiefiles.com/packages/lf20_nzypsmyf.json"
             // style={{ height: '100vh', width: '100vw' }}
             >
             </Player>
@@ -72,25 +72,6 @@ const About: NextPage = () => {
                 <br />
                 Sustainable Ocean for All
               </p>
-              {/* <p className={styles.heroSubtitle}>
-                Implentamos estrategias que involucran tecnología y arte para despertar la conciencia de la necesidad de proteger y restaurar a nuestros ecosistemas. Buscamos involucrar comunidades locales generando formas sustentables de ecoturismo, y al mismo tiempo sensibilizando a los encargados de formular políticas públicas sobre la importancia de los arrecifes de coral para la subsistencia de numerosas especies marinas.
-                <br />
-                • VR Reality
-                <br />
-                • Galería Mural Project
-                <br />
-                • PARTICIPANTES UN OCEAN WORLD 2020
-                <br />
-                • Desafío viaja disfruta y respeta
-                <br />
-                • Raving for The Corals
-                <br />
-                • Día de los océanos en CDMX y Tulum 2018
-                <br />
-                • Members of open explorer y national geographic
-                <br />
-                • Océano sostenible para todos
-              </p> */}
 
               <div className={styles.heroCtaContainer}>
 

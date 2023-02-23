@@ -14,31 +14,32 @@ const About: NextPage = () => {
       <div className={styles.content}>
         <div className={styles.hero}>
           <div className={styles.heroBackground}>
-          <Player
+         
+            <div className={styles.heroBackgroundInner}>
+            <Player
                 autoplay
                 loop
-                src="https://assets6.lottiefiles.com/packages/lf20_qsgqcwag.json"
-                // style={{ height: '100vh', width: '100vw' }}
+                src="https://assets10.lottiefiles.com/private_files/lf30_d4xlubji.json"
+                // style={{ height: '50vh', width: '50vw' }}
               >
               </Player>
-            <div className={styles.heroBackgroundInner}>
             </div>
           </div>
           <div className={styles.heroAssetFrame}>
-           
+          {/* <Player
+                autoplay
+                loop
+                src="https://assets10.lottiefiles.com/private_files/lf30_d4xlubji.json"
+                style={{ height: '50vh', width: '50vw' }}
+              >
+              </Player> */}
           </div>
           <div className={styles.heroBodyContainer}>
          
             <div className={styles.heroBody}>
-            <Image
-              src="/logo-main.png"
-              width={280}
-              height={250}
-              alt="Restore Coral NFT Marketplace"
-              quality={100}
-              className={styles.heroAsset}
-            />
+          
               <h1 className={styles.heroTitle}>
+                <br/>
                 Who Are We?
               </h1>
               <p className={styles.heroSubtitle}>
