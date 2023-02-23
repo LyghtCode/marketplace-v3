@@ -82,9 +82,6 @@ function MyApp({ Component, pageProps }: AppProps) {
               color="secondary"
               onAction={(actionKey) => console.log({ actionKey })}
             >
-              <Dropdown.Item key="connect" css={{ height: "$18" }}>
-                <ConnectWallet />
-              </Dropdown.Item>
               <Dropdown.Item key="profile" css={{ height: "$18" }}>
                 <Text b color="inherit" css={{ d: "flex" }}>
                   Signed in as
@@ -93,10 +90,13 @@ function MyApp({ Component, pageProps }: AppProps) {
                   {address}
                 </Text>
               </Dropdown.Item>
-              <Dropdown.Item key="settings" withDivider>
+              <Dropdown.Item key="settings" >
                 <Link color="inherit" href={`/profile/${address}`}>
                 My Profile
                 </Link>
+              </Dropdown.Item>
+              <Dropdown.Item key="connect" withDivider css={{ height: "$18" }}>
+                <ConnectWallet />
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

@@ -58,9 +58,9 @@ const About: NextPage = () => {
                 <br />
                 VR Reality
                 <br />
-                Galery Mural Project
+                Gallery Mural Project
                 <br />
-                Ocean World Participants 202
+                Ocean World Participants 2020
                 <br />
                 Travel, Enjoy and Respect Challenge
                 <br />
