@@ -15,11 +15,11 @@ import { ChainId } from "@thirdweb-dev/sdk";
 export const NETWORK_ID = ChainId.Polygon;
 
 // 2. The address of the marketplace smart contract.
-export const MARKETPLACE_ADDRESS = "0x1D733288366b90781059BB8Fcf5680De8925CfFC";
+export const MARKETPLACE_ADDRESS = "0xC1556b8276a98efFf6C68627A458B61986d70eC6";
 
 // 3. The address of your NFT collection smart contract.
 export const NFT_COLLECTION_ADDRESS =
-  "0x78D06B1F19dDb6Ba5765F6A60D29EF6059c89a47";
+  "0x818A47288db97DafAB98Abd74CC0fcb3115EfE27";
 
 // 4. The ABI of your NFT collection smart contract.
 export const NFT_COLLECTION_ABI = [
