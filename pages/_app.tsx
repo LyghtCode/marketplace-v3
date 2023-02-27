@@ -64,13 +64,11 @@ function MyApp({ Component, pageProps }: AppProps) {
               },
             }}
           >
-            <Dropdown placement="bottom-right">
+            <ConnectWallet />
+            {/* <Dropdown placement="bottom-right">
               <Navbar.Item>
                 <Dropdown.Trigger>
-                  {/* <ConnectWallet />
-               */}
                   <Image
-                    // className={styles.profileImage}
                     src="/user-icon.png"
                     width={42}
                     height={42}
@@ -101,7 +99,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   <ConnectWallet />
                 </Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
           </Navbar.Content>
           <Navbar.Collapse>
             <Navbar.CollapseItem
