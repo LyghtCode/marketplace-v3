@@ -19,6 +19,9 @@ import {
 } from "../../../const/contractAddresses";
 import styles from "../../../styles/Token.module.css";
 import Link from "next/link";
+import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
+import { useAddress } from "@thirdweb-dev/react";
+
 
 type Props = {
   nft: NFT;
@@ -26,6 +29,7 @@ type Props = {
 };
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
+  const address = useAddress();
   // Connect to marketplace smart contract
   const { contract: marketplace, isLoading: loadingContract } = useContract(
     MARKETPLACE_ADDRESS,
@@ -61,7 +65,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
       },
     });
 
-  console.log("transferEvents", transferEvents);
+  // console.log("transferEvents", transferEvents);
+
+  // console.log("Price", nft);
 
   return (
     <Container maxWidth="lg">
@@ -104,21 +110,29 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             {/* Pricing information */}
             <div className={styles.pricingInfo}>50 USDC</div>
             <Web3Button
-                        contractAddress={NFT_COLLECTION_ADDRESS || ""}
-                        action={(cntr) => cntr.erc1155.claim(nft.metadata.id,1)}
-                        // isDisabled={!canClaim || buttonLoading}
-                        onError={(err) => {
-                          console.error(err);
-                          alert("Error claiming NFTs");
-                        }}
-                        onSuccess={() => {
-                          // setQuantity(1);
-                          alert("Successfully claimed NFTs");
-                        }}
-                      >
-                        Restore Now
-                        {/* {buttonLoading ? "Loading..." : buttonText} */}
-                      </Web3Button>
+              contractAddress={NFT_COLLECTION_ADDRESS || ""}
+              action={(cntr) => cntr.erc1155.claim(nft.metadata.id, 1)}
+              // isDisabled={!canClaim || buttonLoading}
+              onError={(err) => {
+                console.error(err);
+                alert("Error claiming NFTs");
+              }}
+              onSuccess={() => {
+                // setQuantity(1);
+                alert("Successfully claimed NFTs");
+              }}
+            >
+              Restore Now
+              {/* {buttonLoading ? "Loading..." : buttonText} */}
+            </Web3Button>
+            {/* {address && <CrossmintPayButton
+              clientId="cc19f12c-0355-4c82-9cae-7b8451c57702"
+              style={{content: 'Pay with Card'}}
+              // mintTo={address}
+              mintConfig={{ "type": "erc-1155", "totalPrice": "50", "_tokenId": `${nft.metadata.id}`, "_quantity": "1", "_currency": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174", "_pricePerToken": "50000000000000000000", "_allowlistProof": { "proof": ["0x0000000000000000000000000000000000000000000000000000000000000000"], "maxQuantityInAllowlist": 0 }, "_data": "0x00" }}
+
+            />} */}
+
           </div>
 
           {/* 1. Item is not for sale? */}
