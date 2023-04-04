@@ -67,7 +67,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
   // console.log("transferEvents", transferEvents);
 
-  // console.log("Price", nft);
+  console.log("Price", nft);
 
   return (
     <Container maxWidth="lg">
@@ -97,18 +97,18 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             className={styles.nftOwnerContainer}
           >
             {/* Random linear gradient circle shape */}
-            <div className={styles.nftOwnerImage} />
+            {/* <div className={styles.nftOwnerImage} /> */}
             <div className={styles.nftOwnerInfo}>
-              <p className={styles.label}>Current Owner</p>
-              <p className={styles.nftOwnerAddress}>
-                {nft.owner.slice(0, 8)}...{nft.owner.slice(-4)}
+              <p className={styles.label}># Sold</p>
+              <p className={styles.title}>
+                {/* {nft.owner.slice(0, 8)}...{nft.owner.slice(-4)} */}
+                {nft.supply}
               </p>
             </div>
           </Link>
-
           <div className={styles.pricingContainer}>
             {/* Pricing information */}
-            <div className={styles.pricingInfo}>50 USDC</div>
+            <div className={styles.pricingInfo}>{nft.metadata.id === '3' ? 250 : 50} USDC</div>
             <Web3Button
               contractAddress={NFT_COLLECTION_ADDRESS || ""}
               action={(cntr) => cntr.erc1155.claim(nft.metadata.id, 1)}
@@ -130,9 +130,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               style={{content: 'Pay with Card'}}
               // mintTo={address}
               mintConfig={{ "type": "erc-1155", "totalPrice": "50", "_tokenId": `${nft.metadata.id}`, "_quantity": "1", "_currency": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174", "_pricePerToken": "50000000000000000000", "_allowlistProof": { "proof": ["0x0000000000000000000000000000000000000000000000000000000000000000"], "maxQuantityInAllowlist": 0 }, "_data": "0x00" }}
-
             />} */}
-
           </div>
 
           {/* 1. Item is not for sale? */}
