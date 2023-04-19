@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             >
             </Player>
             <div className={styles.heroBackgroundInner}>
-
+            
             </div>
           </div>
           <div className={styles.heroAssetFrame}>
