@@ -109,6 +109,17 @@
   transform: translateY(5px);
 }
 
+.heroSubtitle2 {
+  max-width: 640px;
+  margin: 0 0 40px;
+  color: #F05A26;
+  font-size: Min(3.8vw, 20px);
+  letter-spacing: 0.3px;
+  line-height: 140%;
+  text-align: center;
+  transform: translateY(5px);
+}
+
 .heroCtaContainer {
   display: flex;
   flex-direction: row;

@@ -120,3 +120,8 @@ button:hover {
   background: #F05A26;
   border-radius: 10px;
 }
+
+map {
+  -webkit-overflow-scrolling: touch; overflow-y: auto; line-height: 0px;
+
+}

@@ -87,7 +87,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               src={contractMetadata.image}
               className={styles.collectionImage}
             />
-            <p className={styles.collectionName}>{contractMetadata.name}</p>
+            {/* <p className={styles.collectionName}>{contractMetadata.name}</p> */}
           </div>
           <h1 className={styles.title}>{nft.metadata.name}</h1>
           <p className={styles.collectionName}>Token ID #{nft.metadata.id}</p>

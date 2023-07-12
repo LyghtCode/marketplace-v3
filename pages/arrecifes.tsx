@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import { Player } from "@lottiefiles/react-lottie-player";
 
 /**
  * Landing page with a simple gradient background and a hero asset.
@@ -12,33 +11,29 @@ const Arrecife: NextPage = () => {
       <div className={styles.content}>
         <div className={styles.hero}>
           <div className={styles.heroBackground}>
-         
+
             <div className={styles.heroBackgroundInner}>
-            <Player
-              autoplay
-              loop
-              src="https://assets10.lottiefiles.com/packages/lf20_gwsharow.json"
-            // style={{ height: '50vh', width: '50vw' }}
-            >
-            </Player>
 
             </div>
           </div>
           <div className={styles.heroAssetFrame}>
-      
+
           </div>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.heroTitleGradient}>
+              {/* Restore Coral */}
+            </span>
+            <br />
+            The Coral Reef Ecosystem
+          </h1>
+          <div className="map"><iframe style={{ overflow: 'hidden', width: '75vw', height: '600px' }} allow="geolocation *; camera *;" frameBorder='0' src="https://www.mapotic.com/restoration-corridor-mx/embed"></iframe></div>
+
           <div className={styles.heroBodyContainer}>
             <div className={styles.heroBody}>
-              <h1 className={styles.heroTitle}>
-                <span className={styles.heroTitleGradient}>
-                  {/* Restore Coral */}
-                </span>
-                <br />
-                The Coral Reef Ecosystem
-              </h1>
+
               <p className={styles.heroSubtitle}>
-              Healthy coral reefs provide the following:
-              <br />
+                Healthy coral reefs provide the following:
+                <br />
                 <br />
                 Habitat, food, and a spawning and breeding ground for over one million aquatic species, including commercially harvested fish species.
                 <br />
@@ -50,20 +45,6 @@ const Arrecife: NextPage = () => {
                 <br />
                 Sources of new medicines that can be used to treat diseases and other health problems.
               </p>
-              {/* <p className={styles.heroSubtitle}>
-                Los arrecifes de coral sanos brindan lo siguiente:
-                <br />
-                • Hábitat, alimentación y un lugar de desove y cría para más de un millón de especies acuáticas, que incluyen especies de peces de recolección comercial
-                <br />
-                • Alimentos para la sociedad que vive cerca de los arrecifes de coral, especialmente en islas pequeñas
-                <br />
-                • Oportunidades de recreación y turismo, por ejemplo: pesca, snorkel y buceo con equipo de submarinismo, que aportan miles de millones de dólares a las economías locales anualmente
-                <br />
-                • Protección de la infraestructura costera y prevención de la pérdida de vidas a causa de tormentas, tsunamis, inundaciones y erosión
-                <br />
-                • Fuentes de nuevos medicamentos que se pueden utilizar para tratar enfermedades y otros problemas de salud
-              </p> */}
-
               <div className={styles.heroCtaContainer}>
 
               </div>
