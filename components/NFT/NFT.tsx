@@ -69,10 +69,10 @@ export default function NFTComponent({ nft }: Props) {
           </div>
         ) : (
           <div className={styles.nftPriceContainer}>
-            <div>
+            {/* <div>
               <p className={styles.nftPriceLabel}>Price to Restore</p>
               <p className={styles.nftPriceValue}>{nft.metadata.id === '3' ? 250 : 50} USDC</p>
-            </div>
+            </div> */}
           </div>
         )}
       </div>

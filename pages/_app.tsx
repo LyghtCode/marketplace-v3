@@ -49,7 +49,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             hideIn="xs"
             variant="highlight-rounded"
           >
-            <Navbar.Link href="/buy">Adopt-a-Coral</Navbar.Link>
+            <Navbar.Link href="/adopt">Adopt-a-Coral</Navbar.Link>
+            <Navbar.Link href="/adopt-reef">Adopt-a-Reef</Navbar.Link>
+            <Navbar.Link href="/certification">Certifications</Navbar.Link>
             <Navbar.Link href="/about">
               About
             </Navbar.Link>

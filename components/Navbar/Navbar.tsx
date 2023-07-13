@@ -24,7 +24,7 @@ export function Navbar() {
           </Link>
 
           <div className={styles.navMiddle}>
-            <Link href="/buy" className={styles.link}>
+            <Link href="/adopt" className={styles.link}>
             <Image
               src="/icons/exp.png"
               width={36}

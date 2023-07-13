@@ -18,6 +18,7 @@ export default function NFTGrid({
   data,
   overrideOnclickBehavior,
 }: Props) {
+  console.log(data); 
   return (
     <div className={styles.nftGridContainer}>
       {isLoading
