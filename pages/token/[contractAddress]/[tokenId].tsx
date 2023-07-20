@@ -19,9 +19,8 @@ import {
 } from "../../../const/contractAddresses";
 import styles from "../../../styles/Token.module.css";
 import Link from "next/link";
-import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 import { useAddress } from "@thirdweb-dev/react";
-
+import { CheckoutWithCard } from "@paperxyz/react-client-sdk";
 
 type Props = {
   nft: NFT;
@@ -30,44 +29,45 @@ type Props = {
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
   const address = useAddress();
-  // Connect to marketplace smart contract
-  const { contract: marketplace, isLoading: loadingContract } = useContract(
-    MARKETPLACE_ADDRESS,
-    "marketplace-v3"
-  );
+  // // Connect to marketplace smart contract
+  // const { contract: marketplace, isLoading: loadingContract } = useContract(
+  //   MARKETPLACE_ADDRESS,
+  //   "marketplace-v3"
+  // );
 
-  // Connect to NFT Collection smart contract
-  const { contract: nftCollection } = useContract(
-    NFT_COLLECTION_ADDRESS,
-    NFT_COLLECTION_ABI
-  );
+  // // Connect to NFT Collection smart contract
+  // const { contract: nftCollection } = useContract(
+  //   NFT_COLLECTION_ADDRESS,
+  //   NFT_COLLECTION_ABI
+  // );
 
-  const { data: directListing, isLoading: loadingDirect } =
-    useValidDirectListings(marketplace, {
-      tokenContract: NFT_COLLECTION_ADDRESS,
-      tokenId: nft.metadata.id,
-    });
+  // const { data: directListing, isLoading: loadingDirect } =
+  //   useValidDirectListings(marketplace, {
+  //     tokenContract: NFT_COLLECTION_ADDRESS,
+  //     tokenId: nft.metadata.id,
+  //   });
 
-  // 2. Load if the NFT is for auction
-  const { data: auctionListing, isLoading: loadingAuction } =
-    useValidEnglishAuctions(marketplace, {
-      tokenContract: NFT_COLLECTION_ADDRESS,
-      tokenId: nft.metadata.id,
-    });
+  // // 2. Load if the NFT is for auction
+  // const { data: auctionListing, isLoading: loadingAuction } =
+  //   useValidEnglishAuctions(marketplace, {
+  //     tokenContract: NFT_COLLECTION_ADDRESS,
+  //     tokenId: nft.metadata.id,
+  //   });
 
   // Load historical transfer events
-  const { data: transferEvents, isLoading: loadingTransferEvents } =
-    useContractEvents(nftCollection, "Transfer", {
-      queryFilter: {
-        filters: {
-          tokenId: nft.metadata.id,
-        },
-      },
-    });
+  // const { data: transferEvents, isLoading: loadingTransferEvents } =
+  //   useContractEvents(nftCollection, "Transfer", {
+  //     queryFilter: {
+  //       filters: {
+  //         tokenId: nft.metadata.id,
+  //       },
+  //     },
+  //   });
 
   // console.log("transferEvents", transferEvents);
 
   console.log("Price", nft);
+  const contractArgs = { tokenId: nft.metadata.id }
 
   return (
     <Container maxWidth="lg">
@@ -132,6 +132,62 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               mintConfig={{ "type": "erc-1155", "totalPrice": "50", "_tokenId": `${nft.metadata.id}`, "_quantity": "1", "_currency": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174", "_pricePerToken": "50000000000000000000", "_allowlistProof": { "proof": ["0x0000000000000000000000000000000000000000000000000000000000000000"], "maxQuantityInAllowlist": 0 }, "_data": "0x00" }}
             />} */}
           </div>
+          {address ? (<CheckoutWithCard
+            configs={{
+              contractArgs,
+              // Registered contract ID
+              contractId: "b8051ec3-aa6d-451d-9dc0-bfadee791588",
+              // tokenId: nft.metadata.id,
+              // Buyer wallet address
+              walletAddress: address as string,
+              // Mint method (for custom contracts only)
+              mintMethod: {
+                name: "claim",
+                args: {
+                  _receiver: address as string,
+                  _quantity: "1",
+                  _tokenId: nft.metadata.id,
+
+                },
+                payment: {
+                  value: "$PRICE",
+                  currency: "USDC"
+                }
+              }
+            }}
+
+            onPaymentSuccess={(result) => {
+              console.log("Payment successful:", result);
+            }}
+          />) : (<div></div>)}
+          {/* <CheckoutWithCard
+            configs={{
+              contractArgs,
+              // Registered contract ID
+              contractId: "d97e4f3c-54de-45df-affe-60038ed81993",
+              // tokenId: nft.metadata.id,
+              // Buyer wallet address
+              walletAddress: address as string,
+              // Mint method (for custom contracts only)
+              mintMethod: {
+                name: "claim",
+                args: {
+                  _receiver: address as string,
+                  _quantity: "1",
+                  _tokenId: nft.metadata.id,
+
+                },
+                payment: {
+                  value: "$PRICE",
+                  currency: "USDC"
+                }
+              }
+            }}
+          
+            onPaymentSuccess={(result) => {
+              console.log("Payment successful:", result);
+            }}
+          /> */}
 
           {/* 1. Item is not for sale? */}
 

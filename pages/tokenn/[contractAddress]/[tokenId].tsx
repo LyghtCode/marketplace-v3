@@ -30,40 +30,40 @@ type Props = {
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
   const address = useAddress();
-  // Connect to marketplace smart contract
-  const { contract: marketplace, isLoading: loadingContract } = useContract(
-    MARKETPLACE_ADDRESS,
-    "marketplace-v3"
-  );
+  // // Connect to marketplace smart contract
+  // const { contract: marketplace, isLoading: loadingContract } = useContract(
+  //   MARKETPLACE_ADDRESS,
+  //   "marketplace-v3"
+  // );
 
-  // Connect to NFT Collection smart contract
-  const { contract: nftCollection } = useContract(
-    NFT_COLLECTION_ADDRESS2,
-    NFT_COLLECTION_ABI
-  );
+  // // Connect to NFT Collection smart contract
+  // const { contract: nftCollection } = useContract(
+  //   NFT_COLLECTION_ADDRESS2,
+  //   NFT_COLLECTION_ABI
+  // );
 
-  const { data: directListing, isLoading: loadingDirect } =
-    useValidDirectListings(marketplace, {
-      tokenContract: NFT_COLLECTION_ADDRESS2,
-      tokenId: nft.metadata.id,
-    });
+  // const { data: directListing, isLoading: loadingDirect } =
+  //   useValidDirectListings(marketplace, {
+  //     tokenContract: NFT_COLLECTION_ADDRESS2,
+  //     tokenId: nft.metadata.id,
+  //   });
 
-  // 2. Load if the NFT is for auction
-  const { data: auctionListing, isLoading: loadingAuction } =
-    useValidEnglishAuctions(marketplace, {
-      tokenContract: NFT_COLLECTION_ADDRESS2,
-      tokenId: nft.metadata.id,
-    });
+  // // 2. Load if the NFT is for auction
+  // const { data: auctionListing, isLoading: loadingAuction } =
+  //   useValidEnglishAuctions(marketplace, {
+  //     tokenContract: NFT_COLLECTION_ADDRESS2,
+  //     tokenId: nft.metadata.id,
+  //   });
 
-  // Load historical transfer events
-  const { data: transferEvents, isLoading: loadingTransferEvents } =
-    useContractEvents(nftCollection, "Transfer", {
-      queryFilter: {
-        filters: {
-          tokenId: nft.metadata.id,
-        },
-      },
-    });
+  // // Load historical transfer events
+  // const { data: transferEvents, isLoading: loadingTransferEvents } =
+  //   useContractEvents(nftCollection, "Transfer", {
+  //     queryFilter: {
+  //       filters: {
+  //         tokenId: nft.metadata.id,
+  //       },
+  //     },
+  //   });
 
   // console.log("transferEvents", transferEvents);
 

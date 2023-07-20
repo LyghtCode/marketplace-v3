@@ -113,7 +113,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 css={{
                   minWidth: "100%",
                 }}
-                href="/buy"
+                href="/adopt"
               >
                 Adopt-a-Coral
               </Link>
