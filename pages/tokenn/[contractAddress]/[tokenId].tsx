@@ -1,10 +1,6 @@
 import {
   MediaRenderer,
   ThirdwebNftMedia,
-  useContract,
-  useContractEvents,
-  useValidDirectListings,
-  useValidEnglishAuctions,
   Web3Button,
 } from "@thirdweb-dev/react";
 import React from "react";
@@ -12,14 +8,12 @@ import Container from "../../../components/Container/Container";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { CHAIN_ID_TO_NAME, NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
 import {
-  MARKETPLACE_ADDRESS,
   NETWORK_ID,
   NFT_COLLECTION_ABI,
   NFT_COLLECTION_ADDRESS2,
 } from "../../../const/contractAddresses";
 import styles from "../../../styles/Token.module.css";
 import Link from "next/link";
-import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 import { useAddress } from "@thirdweb-dev/react";
 
 

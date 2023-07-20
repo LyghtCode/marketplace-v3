@@ -150,8 +150,8 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
                 },
                 payment: {
-                  value: "$PRICE",
-                  currency: "USDC"
+                  value: "0.1",
+                  currency: "MATIC"
                 }
               }
             }}
