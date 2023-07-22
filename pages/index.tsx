@@ -19,6 +19,7 @@ const Home: NextPage = () => {
             loop={true}
             width={'100vw'}
             height={'100vh'}
+            controls={true}
             />
             {/* <Player
               autoplay
