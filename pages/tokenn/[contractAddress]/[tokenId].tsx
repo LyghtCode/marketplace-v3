@@ -1,12 +1,11 @@
 import {
-  MediaRenderer,
   ThirdwebNftMedia,
   Web3Button,
 } from "@thirdweb-dev/react";
 import React from "react";
 import Container from "../../../components/Container/Container";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { CHAIN_ID_TO_NAME, NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
 import {
   NETWORK_ID,
   NFT_COLLECTION_ABI,
@@ -14,7 +13,7 @@ import {
 } from "../../../const/contractAddresses";
 import styles from "../../../styles/Token.module.css";
 import Link from "next/link";
-import { useAddress } from "@thirdweb-dev/react";
+import Image from "next/image";
 
 
 type Props = {
@@ -23,8 +22,7 @@ type Props = {
 };
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
-  const address = useAddress();
-  // // Connect to marketplace smart contract
+
   // const { contract: marketplace, isLoading: loadingContract } = useContract(
   //   MARKETPLACE_ADDRESS,
   //   "marketplace-v3"
@@ -77,9 +75,13 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
         <div className={styles.listingContainer}>
           <div className={styles.contractMetadataContainer}>
-            <MediaRenderer
-              src={contractMetadata.image}
-              className={styles.collectionImage}
+          <Image
+              src="/logo.png"
+              width={165}
+              height={140}
+              alt="Restore Coral NFT Marketplace"
+              quality={100}
+              className={styles.heroAsset}
             />
             {/* <p className={styles.collectionName}>{contractMetadata.name}</p> */}
           </div>
@@ -141,7 +143,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 export const getStaticProps: GetStaticProps = async (context) => {
   const tokenId = context.params?.tokenId as string;
 
-  const sdk = new ThirdwebSDK(CHAIN_ID_TO_NAME[NETWORK_ID]);
+  const sdk = new ThirdwebSDK(137);
 
   const contract = await sdk.getContractFromAbi(
     NFT_COLLECTION_ADDRESS2,
@@ -160,7 +162,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const sdk = new ThirdwebSDK(CHAIN_ID_TO_NAME[NETWORK_ID]);
+  const sdk = new ThirdwebSDK(137);
 
   const contract = await sdk.getContractFromAbi(
     NFT_COLLECTION_ADDRESS2,

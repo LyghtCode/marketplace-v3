@@ -1,20 +1,44 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-// import { Navbar } from "../components/Navbar/Navbar";
 import NextNProgress from "nextjs-progressbar";
 import { NETWORK_ID } from "../const/contractAddresses";
 import "@fontsource/genos";
 import "../styles/globals.css";
-import { NextUIProvider, Navbar, Link, Text, Avatar, Dropdown } from '@nextui-org/react';
+import {
+  NextUIProvider,
+  Navbar,
+  NavbarBrand,
+  NavbarMenuToggle,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  NavbarMenu,
+  NavbarMenuItem,
+  Button,
+} from "@nextui-org/react";
 import Image from "next/image";
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import { ConnectWallet} from "@thirdweb-dev/react";
+import React from "react";
+import '@fontsource/quando';
+import { Polygon } from "@thirdweb-dev/chains";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const address = useAddress();
-  console.log(address);
+
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = [
+    "Adopt",
+    "Adopt-Reef",
+    "Certification",
+    "About",
+    "Arrecifes",
+    "Historia",
+  ];
 
   return (
-    <ThirdwebProvider desiredChainId={NETWORK_ID}>
+    <ThirdwebProvider activeChain={Polygon}
+    clientId={process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID}
+    >
       {/* Progress bar when navigating between pages */}
       <NextNProgress
         color="var(--color-tertiary)"
@@ -24,143 +48,84 @@ function MyApp({ Component, pageProps }: AppProps) {
         showOnShallow={true}
       />
       <NextUIProvider>
-        <Navbar isBordered variant="floating">
-          <Navbar.Toggle showIn="xs" />
-          <Navbar.Brand
-            css={{
-              "@xs": {
-                w: "12%",
-              },
-            }}
+        <Navbar
+          isBordered
+          isMenuOpen={isMenuOpen}
+          onMenuOpenChange={setIsMenuOpen}
+        >
+          <NavbarContent className="sm:hidden" justify="start">
+            <NavbarMenuToggle
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            />
+          </NavbarContent>
 
-          >
-            <Link href="/">
-              <Image
-                src="/simbolo.png"
-                width={48}
-                height={48}
-                alt="Restore coral NFT Marketplace"
-              />
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Content
-            enableCursorHighlight
-            activeColor="secondary"
-            hideIn="xs"
-            variant="highlight-rounded"
-          >
-            <Navbar.Link href="/adopt">Adopt-a-Coral</Navbar.Link>
-            <Navbar.Link href="/adopt-reef">Adopt-a-Reef</Navbar.Link>
-            <Navbar.Link href="/certification">Certifications</Navbar.Link>
-            <Navbar.Link href="/about">
-              About
-            </Navbar.Link>
-            <Navbar.Link href="/arrecifes">Reefs</Navbar.Link>
-            <Navbar.Link href="/historia">Our Story</Navbar.Link>
-          </Navbar.Content>
-          <Navbar.Content
-            css={{
-              "@xs": {
-                w: "12%",
-                jc: "flex-end",
-              },
-            }}
-          >
-            <ConnectWallet />
-            {/* <Dropdown placement="bottom-right">
-              <Navbar.Item>
-                <Dropdown.Trigger>
-                  <Image
-                    src="/user-icon.png"
-                    width={42}
-                    height={42}
-                    alt="Profile"
-                  />
-                </Dropdown.Trigger>
-              </Navbar.Item>
-              <Dropdown.Menu
-                aria-label="User menu actions"
-                color="secondary"
-                onAction={(actionKey) => console.log({ actionKey })}
-              >
-                <Dropdown.Item key="profile" css={{ height: "$18" }}>
-                  <Text b color="inherit" css={{ d: "flex" }}>
-                    Signed in as
-                  </Text>
-                  {address && (<Text b color="inherit" css={{ d: "flex" }}>
-                    {address as string}
-                  </Text>)}
+          <NavbarContent className="pr-3 sm:hidden" justify="center">
+            <NavbarBrand>
+              <Link href="/">
+                <Image
+                  src="/simbolo.png"
+                  width={48}
+                  height={48}
+                  alt="Restore coral NFT Marketplace"
+                />
+              </Link>
+            </NavbarBrand>
+          </NavbarContent>
 
-                </Dropdown.Item>
-                <Dropdown.Item key="settings" >
-                  {address && (<Link color="inherit" href={"/profile/" + `${address as string}`}>
-                  </Link>
-                  )}
-                </Dropdown.Item>
-                <Dropdown.Item key="connect" withDivider css={{ height: "$18" }}>
-                  <ConnectWallet />
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown> */}
-          </Navbar.Content>
-          <Navbar.Collapse>
-            <Navbar.CollapseItem
-              key={1}
-              activeColor="secondary"
-            >
-              <Link
-                color="inherit"
-                css={{
-                  minWidth: "100%",
-                }}
-                href="/adopt"
-              >
-                Adopt-a-Coral
+          <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+            <NavbarBrand>
+              <Link href="/">
+                <Image
+                  src="/simbolo.png"
+                  width={48}
+                  height={48}
+                  alt="Restore coral NFT Marketplace"
+                />
               </Link>
-            </Navbar.CollapseItem>
-            <Navbar.CollapseItem
-              key={2}
-              activeColor="secondary"
-            >
-              <Link
-                color="inherit"
-                css={{
-                  minWidth: "100%",
-                }}
-                href="/about"
-              >
-                About
+            </NavbarBrand>
+            <NavbarItem>
+              <Link color="foreground" href="/adopt">
+                Adopt
               </Link>
-            </Navbar.CollapseItem>
-            <Navbar.CollapseItem
-              key={3}
-              activeColor="secondary"
-            >
-              <Link
-                color="inherit"
-                css={{
-                  minWidth: "100%",
-                }}
-                href="/arrecifes"
-              >
-                Reefs
+            </NavbarItem>
+            <NavbarItem isActive>
+              <Link href="/certification" aria-current="page">
+                Certification
               </Link>
-            </Navbar.CollapseItem>
-            <Navbar.CollapseItem
-              key={4}
-              activeColor="secondary"
-            >
-              <Link
-                color="inherit"
-                css={{
-                  minWidth: "100%",
-                }}
-                href="/historia"
-              >
-                Our Story
+            </NavbarItem>
+            <NavbarItem>
+              <Link color="foreground" href="/adopt-reef">
+                Adopt a Reef
               </Link>
-            </Navbar.CollapseItem>
-          </Navbar.Collapse>
+            </NavbarItem>
+          </NavbarContent>
+
+          <NavbarContent justify="end">
+            <NavbarItem>
+              <ConnectWallet />
+            </NavbarItem>
+          </NavbarContent>
+
+          <NavbarMenu>
+            {menuItems.map((item, index) => (
+              <NavbarMenuItem key={`${item}-${index}`}>
+                <Link
+                  className="w-full"
+                  color={
+                    index === 2
+                      ? "warning"
+                      : index === menuItems.length - 1
+                      ? "danger"
+                      : "foreground"
+                  }
+                  href="#"
+                  size="lg"
+                >
+                  {item}
+                </Link>
+              </NavbarMenuItem>
+            ))}
+          </NavbarMenu>
         </Navbar>
         <Component {...pageProps} />
       </NextUIProvider>

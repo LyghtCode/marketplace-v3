@@ -1,26 +1,20 @@
 import {
-  MediaRenderer,
   ThirdwebNftMedia,
-  useContract,
-  useContractEvents,
-  useValidDirectListings,
-  useValidEnglishAuctions,
+
   Web3Button,
 } from "@thirdweb-dev/react";
 import React from "react";
 import Container from "../../../components/Container/Container";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { CHAIN_ID_TO_NAME, NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
+import {  NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
 import {
-  MARKETPLACE_ADDRESS,
   NETWORK_ID,
   NFT_COLLECTION_ABI,
   NFT_COLLECTION_ADDRESS3,
 } from "../../../const/contractAddresses";
 import styles from "../../../styles/Token.module.css";
 import Link from "next/link";
-import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
-import { useAddress } from "@thirdweb-dev/react";
+import Image from "next/image";
 
 
 type Props = {
@@ -29,43 +23,7 @@ type Props = {
 };
 
 export default function TokenPage({ nft, contractMetadata }: Props) {
-  const address = useAddress();
-  // // Connect to marketplace smart contract
-  // const { contract: marketplace, isLoading: loadingContract } = useContract(
-  //   MARKETPLACE_ADDRESS,
-  //   "marketplace-v3"
-  // );
 
-  // // Connect to NFT Collection smart contract
-  // const { contract: nftCollection } = useContract(
-  //   NFT_COLLECTION_ADDRESS3,
-  //   NFT_COLLECTION_ABI
-  // );
-
-  // const { data: directListing, isLoading: loadingDirect } =
-  //   useValidDirectListings(marketplace, {
-  //     tokenContract: NFT_COLLECTION_ADDRESS3,
-  //     tokenId: nft.metadata.id,
-  //   });
-
-  // // 2. Load if the NFT is for auction
-  // const { data: auctionListing, isLoading: loadingAuction } =
-  //   useValidEnglishAuctions(marketplace, {
-  //     tokenContract: NFT_COLLECTION_ADDRESS3,
-  //     tokenId: nft.metadata.id,
-  //   });
-
-  // // Load historical transfer events
-  // const { data: transferEvents, isLoading: loadingTransferEvents } =
-  //   useContractEvents(nftCollection, "Transfer", {
-  //     queryFilter: {
-  //       filters: {
-  //         tokenId: nft.metadata.id,
-  //       },
-  //     },
-  //   });
-
-  // console.log("transferEvents", transferEvents);
 
   console.log("Price", nft);
 
@@ -83,11 +41,14 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
         <div className={styles.listingContainer}>
           <div className={styles.contractMetadataContainer}>
-            <MediaRenderer
-              src={contractMetadata.image}
-              className={styles.collectionImage}
+              <Image
+              src="/logo.png"
+              width={165}
+              height={140}
+              alt="Restore Coral NFT Marketplace"
+              quality={100}
+              className={styles.heroAsset}
             />
-            {/* <p className={styles.collectionName}>{contractMetadata.name}</p> */}
           </div>
           <h1 className={styles.title}>{nft.metadata.name}</h1>
           <p className={styles.collectionName}>Token ID #{nft.metadata.id}</p>
@@ -147,7 +108,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 export const getStaticProps: GetStaticProps = async (context) => {
   const tokenId = context.params?.tokenId as string;
 
-  const sdk = new ThirdwebSDK(CHAIN_ID_TO_NAME[NETWORK_ID]);
+  const sdk = new ThirdwebSDK(137);
 
   const contract = await sdk.getContractFromAbi(
     NFT_COLLECTION_ADDRESS3,
@@ -166,7 +127,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const sdk = new ThirdwebSDK(CHAIN_ID_TO_NAME[NETWORK_ID]);
+  const sdk = new ThirdwebSDK(137);
 
   const contract = await sdk.getContractFromAbi(
     NFT_COLLECTION_ADDRESS3,

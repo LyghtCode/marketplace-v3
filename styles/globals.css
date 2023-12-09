@@ -1,29 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face {
-  font-family: 'GTFlexa';
-  src: url('/fonts/GTFlexa-Regular.otf');
- }
-
- @font-face {
-  font-family: 'GTFlexaHeader';
-  src: url('/fonts/GTFlexa-CompressedMedium.otf');
- }
-
- @font-face {
-  font-family: 'GTFlexaSubtitle';
-  src: url('/fonts/GTFlexa-CompressedLight.otf');
- }
-
- @font-face {
-  font-family: 'GTFlexaButton';
-  src: url('/fonts/GTFlexa-Medium.otf');
- }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: GTFlexa, sans-serif;
+  font-family: Quando, sans-serif;
 }
 
 * {
@@ -39,7 +23,7 @@ body {
   background: url('/bg-graphic.png');
   --color-primary: #fada3f;
   --color-secondary: #F05A26;
-  --color-tertiary: #0294fe;
+  --color-tertiary: #4C9FE2;
   --color-quaternary: #9b4dff;
   --card-background: #252133;
   --highlighted-background: #202326;
@@ -50,8 +34,8 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.5;
-  font-family: GTFlexaHeader, sans-serif;
-  color: #F05A26;
+  font-family: Quando, sans-serif;
+  color: #17CFF5;
 }
 
 h3 {
@@ -59,11 +43,11 @@ h3 {
   line-height: 28px;
   font-weight: 700;
   margin-bottom: 0px;
-  font-family: GTFlexaSubtitle, sans-serif;
+  font-family: Quando, sans-serif;
 }
 
 a {
-  color: #0F2445;
+  color: #000291;
   text-decoration: none;
 }
 
@@ -76,7 +60,7 @@ button {
   align-items: center;
   justify-content: center;
   border-color: rgb(255, 255, 255);
-  color: #0F2445 !important;
+  color: #000291 !important;
   background: rgb(255, 255, 255) !important;
   height: 40px;
   border: 1px solid transparent;
@@ -85,39 +69,39 @@ button {
   font-weight: 600;
   font-family: inherit;
   transition: all 0.15s ease-in-out 0s;
-  font-family: GTFlexaButton, sans-serif;
+  font-family: Quando, sans-serif;
 }
 
 button:hover {
   cursor: pointer;
   background: rgb(255, 255, 255);
   border-color: rgb(255, 255, 255);
-  color: #F05A26;
+  color: #17CFF5;
 }
 
 
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 /* background of scroll color */
 *::-webkit-scrollbar-track {
-  background: cornflowerblue;
+  background: #007DFF;
   border-radius: 10px;
 }
 /* bar default static thumb color */
 *::-webkit-scrollbar-thumb {
-  background: #0F2445 ;
+  background: #000291 ;
   border-radius: 10px;
 }
 
 /* bar Hover color */
 *::-webkit-scrollbar-thumb:hover {
-  background: #0F2445;
+  background: #000291;
   border-radius: 10px;
 }
 /* bar Press color */
 *::-webkit-scrollbar-thumb:active {
-  background: #F05A26;
+  background: #17CFF5;
   border-radius: 10px;
 }
 

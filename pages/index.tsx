@@ -14,38 +14,31 @@ const Home: NextPage = () => {
       <div className={styles.content}>
         <div className={styles.hero}>
           <div className={styles.heroBackground}>
-          <ReactPlayer url='https://www.youtube.com/watch?v=AYRgbwfjc7w' 
-            playing={true}
-            loop={true}
-            width={'100vw'}
-            height={'100vh'}
-            controls={true}
-            />
-            {/* <Player
+  
+            <Player
               autoplay
               loop
               src="https://assets10.lottiefiles.com/packages/lf20_nzypsmyf.json"
             >
-            </Player> */}
+            </Player>
             <div className={styles.heroBackgroundInner}>
             
             </div>
           </div>
           <div className={styles.heroAssetFrame}>
-            {/* boop */}
           </div>
           <div >
 
+           
+            <div className={styles.heroBody}>
             <Image
-              src="/logo-main.png"
+              src="/logo.png"
               width={330}
               height={280}
               alt="Restore Coral NFT Marketplace"
               quality={100}
               className={styles.heroAsset}
             />
-            <div className={styles.heroBody}>
-     
             <br/>
               <h1 className={styles.heroTitle}>
                 Our Mission
@@ -53,7 +46,7 @@ const Home: NextPage = () => {
               <p className={styles.heroSubtitle}>
                 Regenerating Coastal & Marine Ecosystems, while reducing poverty and protecting ancestral wisdom with a combination of art, technology & social outreach programs.
               </p>
-              <video width={100} height={50} autoPlay muted loop id="myVideo" src="https://www.youtube.com/watch?v=AYRgbwfjc7w" />
+              {/* <video width={100} height={50} autoPlay muted loop id="myVideo" src="https://www.youtube.com/watch?v=AYRgbwfjc7w" /> */}
             </div>
           </div>
         </div>
