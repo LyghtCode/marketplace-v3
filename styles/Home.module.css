@@ -83,7 +83,7 @@
 .heroTitle {
   margin-top: clamp(-30px, calc(-7vw + 57px), 5px);
   margin-bottom: 20px;
-  color: #F05A26;
+  color: #FFFFFF;
   font-size: Min(12vw, 80px);
   font-style: normal;
   font-weight: 700;
@@ -101,7 +101,7 @@
 .heroSubtitle {
   max-width: 640px;
   margin: 0 0 40px;
-  color: #FFFFFF;
+  color: #000000;
   font-size: Min(3.8vw, 20px);
   letter-spacing: 0.3px;
   line-height: 140%;

@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               </Link>
             </NavbarItem>
             <NavbarItem isActive>
-              <Link href="/certification" aria-current="page">
+              <Link color="foreground" href="/certification" >
                 Certification
               </Link>
             </NavbarItem>
