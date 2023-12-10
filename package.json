@@ -13,6 +13,7 @@
   "dependencies": {
     "@crossmint/client-sdk-react-ui": "^0.2.6-alpha.3",
     "@fontsource/genos": "^4.5.11",
+    "@fontsource/lato": "^5.0.18",
     "@fontsource/quando": "^5.0.18",
     "@lottiefiles/react-lottie-player": "^3.5.2",
     "@nextui-org/react": "^2.2.9",

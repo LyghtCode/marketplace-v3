@@ -32,7 +32,7 @@ const Home: NextPage = () => {
            
             <div className={styles.heroBody}>
             <Image
-              src="/logo.png"
+              src="/simbolo.png"
               width={330}
               height={280}
               alt="Restore Coral NFT Marketplace"

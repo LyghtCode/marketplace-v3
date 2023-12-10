@@ -1,8 +1,6 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import NextNProgress from "nextjs-progressbar";
-import { NETWORK_ID } from "../const/contractAddresses";
-import "@fontsource/genos";
 import "../styles/globals.css";
 import {
   NextUIProvider,
@@ -20,6 +18,7 @@ import Image from "next/image";
 import { ConnectWallet} from "@thirdweb-dev/react";
 import React from "react";
 import '@fontsource/quando';
+import '@fontsource/lato';
 import { Polygon } from "@thirdweb-dev/chains";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -88,7 +87,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 Adopt
               </Link>
             </NavbarItem>
-            <NavbarItem isActive>
+            <NavbarItem>
               <Link color="foreground" href="/certification" >
                 Certification
               </Link>
@@ -112,13 +111,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <Link
                   className="w-full"
                   color={
-                    index === 2
-                      ? "warning"
-                      : index === menuItems.length - 1
-                      ? "danger"
-                      : "foreground"
+                 "foreground"
                   }
-                  href="#"
+                  href={`/${item.toLowerCase()}`}
                   size="lg"
                 >
                   {item}

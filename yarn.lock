@@ -756,6 +756,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/genos/-/genos-4.5.11.tgz#5785be0aa554b7f058b28c54c58d042d26d1ea96"
   integrity sha512-VfFW1+jOWhJgDaLcGoc0Cm83bATdI9Fr+G8LL7GzT1PxGzKdXX1pWJKU5PQGHoxzahT5iKK886rbHbKakMvh1Q==
 
+"@fontsource/lato@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.18.tgz#ad6037c5f1bf8e3604225ef53464fef60c2fea86"
+  integrity sha512-lJa0f4MPXtHsZsLz37wo7d4m5odfOdwCNRg0IjV06ri/fIPypJLEuUB12oWCJ38DDD/XhKVSQPo8BWV8CRBhzQ==
+
 "@fontsource/quando@^5.0.18":
   version "5.0.18"
   resolved "https://registry.yarnpkg.com/@fontsource/quando/-/quando-5.0.18.tgz#0bfef43f7486b5d285068b4435516a5ed416d99e"
